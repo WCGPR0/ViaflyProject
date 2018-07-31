@@ -1,0 +1,47 @@
+</tr>
+</table>
+
+
+<script>
+    $("label").on("click", "#in-stock", function(){
+        $('tbody').fadeOut();
+        if($(this).is(":checked")) {
+             $.get( '/instock', function(data) {
+                $('tbody').html(data).fadeIn();
+             });
+        } else {
+            window.location.replace("/");
+        }
+    });
+    $(function() {
+    var timer;
+    $("#searchBox").keyup(function() {
+        clearTimeout(timer);
+        var val = this.value;
+        $('tbody').fadeOut();
+       if(!val || !val.length) window.location.replace("/");
+        timer = setTimeout(function() {
+            $.get( '/search/' + val, function(data) {
+            $('tbody').html(data).fadeIn();
+             });
+        }, 1000);
+     });
+    });
+    $("label").on("click", ".category-input", function(){
+        var options = new Array();
+        $(".category-input:checked").each(function() {
+            options.push($(this).val());
+        });
+        $('tbody').fadeOut();
+        $.get( '/filter', { "categories[]" : options }, function(data) {
+                $('tbody').html(data).fadeIn();
+        });
+    });
+    function sort(tableID) {
+         $('tbody').fadeOut();
+         $.get( '/sortBy/' + tableID, function(data) {
+           $('tbody').html(data).fadeIn();
+        });
+    };
+</script>
+</body> </html>

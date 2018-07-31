@@ -1,0 +1,23 @@
+On the way home, Carol sees a clothing store and realizes she needs new
+
+clothes for the coming Fall. She walks in, but isn’t sure if the store has what she
+
+is looking for. In fact, she doesn’t even know what the store even carries!
+
+Viafly to the rescue! We asked the store owner for their inventory, and now we
+
+have a list of items in a CSV file attached here:
+
+https://docs.google.com/a/getviafly.com/spreadsheets/d/1J88jnI6Nn8d-gVgbZZ
+
+Rv5CNaQO5zXldvAPH-wdN7Wzg/edit?usp=sharing
+
+Ideally, Carol wants to do the following with the App:
+
+1. Find the list of items that are in-stock
+
+2. Search by the items name
+
+3. Filter items based on categories
+
+4. Sort the items by price
